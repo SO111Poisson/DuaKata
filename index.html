@@ -3,74 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasbor Pembangunan Sumba Timur</title>
+    <title>Dasbor Prioritas Pembangunan - Sumba Timur</title>
     <!-- Memuat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Menggunakan font Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style untuk tab aktif */
-        .tab-active {
-            border-bottom-color: #3b82f6; /* blue-500 */
-            color: #3b82f6;
-            font-weight: 600;
+        body { font-family: 'Inter', sans-serif; }
+        /* Style untuk tab aktif di sidebar (meskipun ini statis) */
+        .sidebar-active {
+            background-color: #2563eb; /* blue-600 */
+            color: white;
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4 md:p-8">
-    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-        
-        <!-- Header -->
-        <header class="bg-gray-800 text-white p-6">
-            <h1 class="text-2xl md:text-3xl font-bold">Dasbor Prioritas Pembangunan Sumba Timur</h1>
-            <p class="text-sm md:text-base text-gray-300 mt-1">Elaborasi Official Statistics & Artificial Intelligence (Studi Kasus POISSON 2025)</p>
-        </header>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar (Navigasi Khas Dasbor Pemerintah) -->
+        <aside class="w-64 bg-gray-800 text-gray-200 p-5 flex-shrink-0">
+            <h1 class="text-xl font-semibold text-white mb-6">Dasbor AI-OS</h1>
+            <nav class="space-y-2">
+                <a href="#" class="sidebar-active flex items-center px-3 py-2 rounded-md font-medium">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6-4h.01M9 16h.01M12 16h.01M15 16h.01M9 12h.01M12 12h.01M15 12h.01M9 8h.01M12 8h.01M15 8h.01"></path></svg>
+                    Ringkasan
+                </a>
+                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium hover:bg-gray-700">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    Analisis Klaster
+                </a>
+                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium hover:bg-gray-700">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 18h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2z"></path></svg>
+                    Tabel Data
+                </a>
+            </nav>
 
-        <main class="p-6 md:p-8">
-            
-            <!-- Peta Placeholder -->
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Peta Sebaran Klaster Wilayah</h2>
-                <div class="w-full bg-gray-200 rounded-lg flex items-center justify-center h-64 md:h-96 text-gray-500 text-center p-4">
-                    <img src="https://placehold.co/1000x500/e2e8f0/64748b?text=PETA+SUMBA+TIMUR+(WARNAI+SESUAI+3+KLASTER)" 
-                         alt="Placeholder Peta Sumba Timur"
-                         class="object-contain w-full h-full rounded-md"
-                         onerror="this.src='https://placehold.co/1000x500/e2e8f0/64748b?text=Gagal+memuat+gambar.+Masukkan+peta+Anda+di+sini.'">
-                    <p class="absolute text-lg font-medium text-gray-700 bg-white bg-opacity-75 px-3 py-1 rounded">
-                        [PETA STATIS: Ganti gambar ini dengan peta yang sudah diwarnai sesuai 3 klaster]
-                    </p>
-                </div>
-            </section>
+            <!-- Petunjuk Penggunaan -->
+            <div class="mt-10 pt-4 border-t border-gray-700">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Petunjuk Penggunaan</h3>
+                <p class="text-xs text-gray-400">
+                    Dasbor ini adalah purwarupa untuk memvisualisasikan hasil analisis klaster (FPCM) dan rekomendasi kebijakan.
+                    <br><br>
+                    1. Lihat peta untuk sebaran geografis klaster.
+                    <br>
+                    2. Klik *dropdown* "Cek Kecamatan" untuk detail.
+                    <br>
+                    3. Lihat 3 boks di bawah untuk ringkasan tiap klaster.
+                </p>
+                <p class="text-xs text-gray-500 mt-4">&copy; 2025 - Tim Dua Kata</p>
+            </div>
+        </aside>
 
-            <!-- Fitur Utama: Cek Kecamatan & Profil Klaster -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Konten Utama -->
+        <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+            <!-- Header Konten -->
+            <header class="mb-6 flex justify-between items-center">
+                <h2 class="text-3xl font-bold text-gray-800">Ringkasan Pembangunan (AI-OS) Sumba Timur</h2>
+                <span class="text-sm text-gray-500">Data: BPS 2023-2024</span>
+            </header>
 
-                <!-- Kiri: Cek Kecamatan (Dropdown) -->
-                <section class="lg:col-span-1 bg-gray-50 p-5 rounded-lg shadow-inner">
-                    <h2 class="text-xl font-semibold text-gray-700 mb-4">Cek Kecamatan Anda</h2>
+            <!-- Grid Peta dan Kecamatan -->
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
+                <!-- Kolom Peta (Lebih besar) -->
+                <section class="lg:col-span-3 bg-white p-5 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Peta Sebaran Klaster Wilayah</h3>
+                    <div class="w-full bg-gray-200 rounded-lg flex items-center justify-center h-96 text-gray-500">
+                        <!-- 
+                        GANTI URL DI BAWAH INI
+                        Upload gambar peta Anda (image_295223.jpg) ke GitHub repository Anda.
+                        Klik file gambar itu di GitHub, klik "Download", lalu copy link-nya.
+                        ATAU, cara paling aman, klik "View Raw", lalu copy URL dari address bar.
+                        Contoh: https://raw.githubusercontent.com/[Username-Anda]/[Repo-Anda]/main/image_295223.jpg
+                        -->
+                        <img src="https://raw.githubusercontent.com/Username/Repo/main/image_295223.jpg" 
+                             alt="Peta Sebaran Klaster Sumba Timur"
+                             class="object-contain w-full h-full rounded-md"
+                             onerror="this.alt='Gagal memuat peta. Ganti URL di atas dengan link GitHub Anda.'">
+                    </div>
+                </section>
+
+                <!-- Kolom Dropdown Kecamatan -->
+                <section class="lg:col-span-2 bg-white p-5 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Cek Data Kecamatan</h3>
+                    <p class="text-sm text-gray-600 mb-3">Pilih kecamatan untuk melihat profil data dan klaster.</p>
                     <select id="kecamatan-select" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">-- Pilih Kecamatan --</option>
-                        <!-- Opsi akan diisi oleh JavaScript -->
+                        <!-- Opsi diisi oleh JavaScript -->
                     </select>
 
-                    <!-- Kartu Detail Kecamatan -->
-                    <div id="detail-card" class="mt-4 p-4 bg-white rounded-lg shadow hidden">
-                        <h3 id="detail-nama" class="text-lg font-bold text-gray-900">Nama Kecamatan</h3>
+                    <!-- Kartu Detail Kecamatan (Akan muncul setelah dipilih) -->
+                    <div id="detail-card" class="mt-4 p-4 rounded-lg shadow-inner hidden" style="border: 1px solid #e2e8f0;">
+                        <h4 id="detail-nama" class="text-lg font-bold text-gray-900">Nama Kecamatan</h4>
                         <span id="detail-klaster-badge" class="inline-block px-3 py-1 text-sm font-semibold rounded-full mt-1 mb-3">Klaster X</span>
                         
                         <div class="space-y-2 text-sm">
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-b pb-1">
                                 <span class="text-gray-600">Petani:</span>
                                 <span id="detail-petani" class="font-medium text-gray-800">0%</span>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-b pb-1">
                                 <span class="text-gray-600">Tanpa Listrik:</span>
                                 <span id="detail-listrik" class="font-medium text-gray-800">0%</span>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-b pb-1">
                                 <span class="text-gray-600">Objek Wisata (per 100km²):</span>
                                 <span id="detail-obwis" class="font-medium text-gray-800">0</span>
                             </div>
@@ -80,76 +114,55 @@
                             </div>
                         </div>
 
-                        <div class="mt-4 pt-4 border-t">
-                            <h4 class="font-semibold text-gray-700">Rekomendasi Kebijakan:</h4>
+                        <div class="mt-4 pt-3 border-t">
+                            <h5 class="font-semibold text-gray-700">Rekomendasi Utama:</h5>
                             <p id="detail-rekomendasi" class="text-sm text-gray-600 mt-1">Rekomendasi akan muncul di sini.</p>
                         </div>
                     </div>
                 </section>
+            </div>
 
-                <!-- Kanan: Profil Klaster (Tabs) -->
-                <section class="lg:col-span-2">
-                    <!-- Tab Headers -->
-                    <div class="border-b border-gray-200">
-                        <nav class="flex -mb-px space-x-6" id="tabs">
-                            <button data-tab="klaster1" class="tab-button tab-active text-base py-3 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700">
-                                Klaster 1
-                            </button>
-                            <button data-tab="klaster2" class="tab-button text-base py-3 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700">
-                                Klaster 2
-                            </button>
-                            <button data-tab="klaster3" class="tab-button text-base py-3 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700">
-                                Klaster 3
-                            </button>
-                        </nav>
+            <!-- Grid 3 Klaster (Sesuai Warna Peta Anda) -->
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Ringkasan Profil Klaster</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- KLASTER 1 (Kuning/Hijau) - Sesuai Makalah 4.3 dan 5.2 -->
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-yellow-400">
+                    <h4 class="text-xl font-bold text-yellow-800">Klaster 1: Wilayah Agraris Mandiri Energi</h4>
+                    <p class="text-sm text-gray-600 mt-2 mb-3">8 Kecamatan (misal: Tabudung, Mahu). Didominasi petani (89.8%) dgn listrik baik (Non Listrik 1.3%), namun minim ekonomi non-agraris.</p>
+                    <div class="bg-yellow-50 p-3 rounded">
+                        <h5 class="font-semibold text-yellow-900">Rekomendasi (SDG 8):</h5>
+                        <p class="text-sm text-yellow-800">Intervensi diversifikasi. Fokus pada penguatan kelembagaan ekonomi (koperasi) dan pengenalan teknologi pascapanen untuk meningkatkan nilai tambah sektor agraris.</p>
                     </div>
+                </div>
 
-                    <!-- Tab Content -->
-                    <div class="py-6">
-                        <!-- Klaster 1 Content -->
-                        <div id="klaster1" class="tab-content space-y-4">
-                            <h2 class="text-2xl font-bold text-green-600">Klaster 1: Wilayah Agraris Mandiri Energi</h2>
-                            <p class="text-gray-600">Wilayah ini didominasi petani dengan infrastruktur listrik yang sudah sangat baik. Tantangan utamanya adalah minimnya diversifikasi ekonomi.</p>
-                            <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
-                                <h4 class="font-semibold text-green-800">Rekomendasi Utama:</h4>
-                                <p class="text-green-700 text-sm">Diversifikasi ekonomi dan penguatan kelembagaan (koperasi) untuk meningkatkan nilai tambah sektor agraris.</p>
-                            </div>
-                            <h5 class="font-semibold text-gray-700 pt-2">Kecamatan (8):</h5>
-                            <p id="list-klaster1" class="text-sm text-gray-600 leading-relaxed"></p>
-                        </div>
-
-                        <!-- Klaster 2 Content -->
-                        <div id="klaster2" class="tab-content space-y-4 hidden">
-                            <h2 class="text-2xl font-bold text-red-600">Klaster 2: Wilayah Prioritas Infrastruktur (SDG 7)</h2>
-                            <p class="text-gray-600">Menjadi kantong kemiskinan energi (tanpa listrik tertinggi). Ironisnya, memiliki inisiatif koperasi tertinggi, menunjukkan potensi ekonomi kerakyatan yang terhambat.</p>
-                            <div class="bg-red-50 border border-red-200 p-4 rounded-lg">
-                                <h4 class="font-semibold text-red-800">Rekomendasi Utama:</h4>
-                                <p class="text-red-700 text-sm">Percepatan pemenuhan **SDG 7 (Energi Bersih dan Terjangkau)**. Listrik adalah prioritas #1 untuk membuka potensi ekonomi.</p>
-                            </div>
-                            <h5 class="font-semibold text-gray-700 pt-2">Kecamatan (7):</h5>
-                            <p id="list-klaster2" class="text-sm text-gray-600 leading-relaxed"></p>
-                        </div>
-
-                        <!-- Klaster 3 Content -->
-                        <div id="klaster3" class="tab-content space-y-4 hidden">
-                            <h2 class="text-2xl font-bold text-blue-600">Klaster 3: Wilayah Diversifikasi Ekonomi (SDG 8)</h2>
-                            <p class="text-gray-600">Wilayah paling berkembang dengan struktur ekonomi yang mulai bertransformasi (petani terendah). Menjadi pusat pariwisata dan koperasi yang kuat.</p>
-                            <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
-                                <h4 class="font-semibold text-blue-800">Rekomendasi Utama:</h4>
-                                <p class="text-blue-700 text-sm">Akselerasi **SDG 8 (Pekerjaan Layak & Pertumbuhan Ekonomi)** melalui hilirisasi pariwisata dan penguatan usaha non-pertanian.</p>
-                            </div>
-                            <h5 class="font-semibold text-gray-700 pt-2">Kecamatan (7):</h5>
-                            <p id="list-klaster3" class="text-sm text-gray-600 leading-relaxed"></p>
-                        </div>
+                <!-- KLASTER 2 (Merah/Pink) - Sesuai Makalah 4.3 dan 5.2 - PRIORITAS -->
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-red-500">
+                    <h4 class="text-xl font-bold text-red-800">Klaster 2: Wilayah Prioritas Infrastruktur (SDG 7)</h4>
+                    <p class="text-sm text-gray-600 mt-2 mb-3">7 Kecamatan (misal: Karera, Kahaungu eti). Menjadi kantong kemiskinan energi (Non Listrik 9.5%), padahal potensi koperasi tinggi.</p>
+                    <div class="bg-red-50 p-3 rounded">
+                        <h5 class="font-semibold text-red-900">Rekomendasi (SDG 7):</h5>
+                        <p class="text-sm text-red-800">Intervensi paling mendesak. Akselerasi SDG 7 (Energi Bersih/Listrik) untuk membuka *bottleneck* ekonomi (koperasi) yang sudah ada di wilayah ini.</p>
                     </div>
-                </section>
+                </div>
+
+                <!-- KLASTER 3 (Biru) - Sesuai Makalah 4.3 dan 5.2 -->
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-blue-500">
+                    <h4 class="text-xl font-bold text-blue-800">Klaster 3: Wilayah Diversifikasi Ekonomi (SDG 8)</h4>
+                    <p class="text-sm text-gray-600 mt-2 mb-3">7 Kecamatan (misal: Kota Waingapu, Kambera). Wilayah berkembang, petani terendah (47.0%), pusat pariwisata (Obwis 1.40).</p>
+                    <div class="bg-blue-50 p-3 rounded">
+                        <h5 class="font-semibold text-blue-900">Rekomendasi (SDG 8):</h5>
+                        <p class="text-sm text-blue-800">Intervensi akselerasi. Mendorong hilirisasi pariwisata dan penguatan usaha non-pertanian untuk pertumbuhan ekonomi.</p>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
 
     <script>
-        // --- Data dari hasil_anggota_klaster.csv ---
-        // Data ini di-hardcode dari output analisis R Anda
+        // Data dari hasil_anggota_klaster.csv (Sesuai makalah Anda)
+        // Saya menggunakan data mentah dari file #Edit_Dataset_Poisson.xlsx - Sheet1.csv
         const dataKecamatan = [
             { "Kecamatan": "Tabudung", "Klaster_FPCM": 1, "Presentase_petani": 0.927, "Presentase_non_Listrik": 0.014, "obwis_100": 0.583, "Coop_1000": 0.000 },
             { "Kecamatan": "Umalulu", "Klaster_FPCM": 2, "Presentase_petani": 0.716, "Presentase_non_Listrik": 0.042, "obwis_100": 0.650, "Coop_1000": 0.690 },
@@ -175,64 +188,42 @@
             { "Kecamatan": "Rindi", "Klaster_FPCM": 1, "Presentase_petani": 0.814, "Presentase_non_Listrik": 0.023, "obwis_100": 0.273, "Coop_1000": 0.000 }
         ];
 
-        // Definisi Klaster (Profil & Rekomendasi)
+        // Definisi Klaster (Sesuai makalah Anda Bab 5.2)
         const klasterInfo = {
             1: {
-                nama: "Klaster 1: Agraris Mandiri Energi",
-                badgeClass: "bg-green-100 text-green-800",
-                rekomendasi: "Diversifikasi ekonomi dan penguatan kelembagaan (koperasi) untuk meningkatkan nilai tambah sektor agraris."
+                nama: "Klaster 1: Wilayah Agraris Mandiri Energi",
+                badgeClass: "bg-yellow-100 text-yellow-800 border-yellow-300",
+                rekomendasi: "Intervensi diversifikasi. Fokus pada penguatan kelembagaan ekonomi (koperasi) dan pengenalan teknologi pascapanen untuk meningkatkan nilai tambah sektor agraris."
             },
             2: {
-                nama: "Klaster 2: Prioritas Infrastruktur (SDG 7)",
-                badgeClass: "bg-red-100 text-red-800",
-                rekomendasi: "Percepatan pemenuhan SDG 7 (Energi Bersih dan Terjangkau). Listrik adalah prioritas #1 untuk membuka potensi ekonomi."
+                nama: "Klaster 2: Wilayah Prioritas Infrastruktur (SDG 7)",
+                badgeClass: "bg-red-100 text-red-800 border-red-300",
+                rekomendasi: "Intervensi paling mendesak. Akselerasi SDG 7 (Energi Bersih/Listrik) untuk membuka bottleneck ekonomi (koperasi) yang sudah ada di wilayah ini."
             },
             3: {
-                nama: "Klaster 3: Diversifikasi Ekonomi (SDG 8)",
-                badgeClass: "bg-blue-100 text-blue-800",
-                rekomendasi: "Akselerasi SDG 8 (Pekerjaan Layak & Pertumbuhan Ekonomi) melalui hilirisasi pariwisata dan penguatan usaha non-pertanian."
+                nama: "Klaster 3: Wilayah Diversifikasi Ekonomi (SDG 8)",
+                badgeClass: "bg-blue-100 text-blue-800 border-blue-300",
+                rekomendasi: "Intervensi akselerasi. Mendorong hilirisasi pariwisata dan penguatan usaha non-pertanian untuk pertumbuhan ekonomi."
             }
         };
 
-        // Fungsi untuk memformat persentase
-        function formatPersen(num) {
-            return (num * 100).toFixed(1) + '%';
-        }
-
-        // Fungsi untuk memformat angka desimal
-        function formatDesimal(num) {
-            return num.toFixed(3);
-        }
+        // Fungsi format
+        function formatPersen(num) { return (num * 100).toFixed(1) + '%'; }
+        function formatDesimal(num) { return num.toFixed(3); }
 
         document.addEventListener('DOMContentLoaded', () => {
             const select = document.getElementById('kecamatan-select');
             const detailCard = document.getElementById('detail-card');
             
-            // Mengisi dropdown dan list klaster
-            const listKlaster1 = [];
-            const listKlaster2 = [];
-            const listKlaster3 = [];
-
             // Urutkan berdasarkan abjad
             dataKecamatan.sort((a, b) => a.Kecamatan.localeCompare(b.Kecamatan));
 
             dataKecamatan.forEach(kec => {
-                // Isi dropdown
                 const option = document.createElement('option');
                 option.value = kec.Kecamatan;
                 option.textContent = kec.Kecamatan;
                 select.appendChild(option);
-
-                // Isi list klaster
-                if (kec.Klaster_FPCM === 1) listKlaster1.push(kec.Kecamatan);
-                if (kec.Klaster_FPCM === 2) listKlaster2.push(kec.Kecamatan);
-                if (kec.Klaster_FPCM === 3) listKlaster3.push(kec.Kecamatan);
             });
-
-            // Tampilkan list kecamatan di tab
-            document.getElementById('list-klaster1').textContent = listKlaster1.join(', ');
-            document.getElementById('list-klaster2').textContent = listKlaster2.join(', ');
-            document.getElementById('list-klaster3').textContent = listKlaster3.join(', ');
 
             // Event listener untuk dropdown
             select.addEventListener('change', (e) => {
@@ -241,14 +232,13 @@
                     detailCard.classList.add('hidden');
                     return;
                 }
-
                 const data = dataKecamatan.find(k => k.Kecamatan === namaKecamatan);
                 const info = klasterInfo[data.Klaster_FPCM];
 
-                // Isi detail card
                 document.getElementById('detail-nama').textContent = data.Kecamatan;
                 document.getElementById('detail-klaster-badge').textContent = info.nama;
                 document.getElementById('detail-klaster-badge').className = `inline-block px-3 py-1 text-sm font-semibold rounded-full mt-1 mb-3 ${info.badgeClass}`;
+                document.getElementById('detail-card').style.borderColor = info.badgeClass.split(' ')[2].replace('border-', '#'); // Sesuaikan border
                 
                 document.getElementById('detail-petani').textContent = formatPersen(data.Presentase_petani);
                 document.getElementById('detail-listrik').textContent = formatPersen(data.Presentase_non_Listrik);
@@ -258,27 +248,6 @@
 
                 detailCard.classList.remove('hidden');
             });
-
-            // Event listener untuk Tabs
-            const tabs = document.getElementById('tabs');
-            const tabButtons = tabs.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabs.addEventListener('click', (e) => {
-                const targetTab = e.target.closest('button');
-                if (!targetTab) return;
-
-                const tabId = targetTab.dataset.tab;
-
-                // Non-aktifkan semua
-                tabButtons.forEach(btn => btn.classList.remove('tab-active', 'text-blue-500', 'font-semibold'));
-                tabContents.forEach(content => content.classList.add('hidden'));
-
-                // Aktifkan yang dipilih
-                targetTab.classList.add('tab-active');
-                document.getElementById(tabId).classList.remove('hidden');
-            });
-
         });
     </script>
 </body>
