@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasbor Prioritas Pembangunan - Sumba Timur</title>
+    <title>Dasbor Klaster FPCM - Sumba Timur</title>
     <!-- Memuat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -23,25 +23,27 @@
         <aside class="w-64 bg-gray-800 text-gray-200 p-5 flex-shrink-0">
             <h1 class="text-xl font-semibold text-white mb-6">Dasbor AI-OS</h1>
             <nav class="space-y-2">
-                <a href="#" class="sidebar-active flex items-center px-3 py-2 rounded-md font-medium">
+                <!-- Menu 1 (Aktif) -->
+                <a href="#" class="sidebar-active flex items-center px-3 py-2 rounded-md font-medium" aria-current="page">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6-4h.01M9 16h.01M12 16h.01M15 16h.01M9 12h.01M12 12h.01M15 12h.01M9 8h.01M12 8h.01M15 8h.01"></path></svg>
                     Ringkasan
                 </a>
-                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium hover:bg-gray-700">
+                <!-- Menu 2 & 3 (Dummy, tidak bisa diklik) -->
+                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium text-gray-400 cursor-not-allowed" onclick="return false;">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    Analisis Klaster
+                    Analisis Detail
                 </a>
-                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium hover:bg-gray-700">
+                <a href="#" class="flex items-center px-3 py-2 rounded-md font-medium text-gray-400 cursor-not-allowed" onclick="return false;">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 18h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2z"></path></svg>
                     Tabel Data
                 </a>
             </nav>
 
-            <!-- Petunjuk Penggunaan -->
+            <!-- Petunjuk Penggunaan (Sesuai Permintaan) -->
             <div class="mt-10 pt-4 border-t border-gray-700">
                 <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Petunjuk Penggunaan</h3>
                 <p class="text-xs text-gray-400">
-                    Dasbor ini adalah purwarupa untuk memvisualisasikan hasil analisis klaster (FPCM) dan rekomendasi kebijakan.
+                    Dasbor ini adalah purwarupa statis untuk memvisualisasikan hasil analisis klaster (FPCM) dan rekomendasi kebijakan.
                     <br><br>
                     1. Lihat peta untuk sebaran geografis klaster.
                     <br>
@@ -55,10 +57,10 @@
 
         <!-- Konten Utama -->
         <main class="flex-1 p-6 md:p-8 overflow-y-auto">
-            <!-- Header Konten -->
+            <!-- Header Konten (Judul & Data Source Sesuai Permintaan) -->
             <header class="mb-6 flex justify-between items-center">
-                <h2 class="text-3xl font-bold text-gray-800">Ringkasan Pembangunan (AI-OS) Sumba Timur</h2>
-                <span class="text-sm text-gray-500">Data: BPS 2023-2024</span>
+                <h2 class="text-3xl font-bold text-gray-800">Dasbor Analisis Klaster FPCM Sumba Timur</h2>
+                <span class="text-sm text-gray-500">Data: BPS</span>
             </header>
 
             <!-- Grid Peta dan Kecamatan -->
@@ -69,12 +71,11 @@
                     <div class="w-full bg-gray-200 rounded-lg flex items-center justify-center h-96 text-gray-500">
                         <!-- 
                         GANTI URL DI BAWAH INI
-                        Upload gambar peta Anda (image_295223.jpg) ke GitHub repository Anda.
-                        Klik file gambar itu di GitHub, klik "Download", lalu copy link-nya.
-                        ATAU, cara paling aman, klik "View Raw", lalu copy URL dari address bar.
-                        Contoh: https://raw.githubusercontent.com/[Username-Anda]/[Repo-Anda]/main/image_295223.jpg
+                        Upload petapoissonfix.png ke GitHub repository Anda.
+                        Klik file gambar itu di GitHub, klik "View Raw", lalu copy URL dari address bar.
+                        Contoh: https://raw.githubusercontent.com/[Username-Anda]/[Repo-Anda]/main/petapoissonfix.png
                         -->
-                        <img src="https://raw.githubusercontent.com/Username/Repo/main/image_295223.jpg" 
+                        <img src="SRC_LINK_GITHUB_ANDA/petapoissonfix.png" 
                              alt="Peta Sebaran Klaster Sumba Timur"
                              class="object-contain w-full h-full rounded-md"
                              onerror="this.alt='Gagal memuat peta. Ganti URL di atas dengan link GitHub Anda.'">
@@ -122,11 +123,11 @@
                 </section>
             </div>
 
-            <!-- Grid 3 Klaster (Sesuai Warna Peta Anda) -->
+            <!-- Grid 3 Klaster (Sesuai Warna Peta Anda dan Makalah Bab 5.2) -->
             <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Ringkasan Profil Klaster</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- KLASTER 1 (Kuning/Hijau) - Sesuai Makalah 4.3 dan 5.2 -->
+                <!-- KLASTER 1 (Kuning/Hijau) -->
                 <div class="bg-white p-5 rounded-lg shadow border-t-4 border-yellow-400">
                     <h4 class="text-xl font-bold text-yellow-800">Klaster 1: Wilayah Agraris Mandiri Energi</h4>
                     <p class="text-sm text-gray-600 mt-2 mb-3">8 Kecamatan (misal: Tabudung, Mahu). Didominasi petani (89.8%) dgn listrik baik (Non Listrik 1.3%), namun minim ekonomi non-agraris.</p>
@@ -136,7 +137,7 @@
                     </div>
                 </div>
 
-                <!-- KLASTER 2 (Merah/Pink) - Sesuai Makalah 4.3 dan 5.2 - PRIORITAS -->
+                <!-- KLASTER 2 (Merah/Pink) - PRIORITAS -->
                 <div class="bg-white p-5 rounded-lg shadow border-t-4 border-red-500">
                     <h4 class="text-xl font-bold text-red-800">Klaster 2: Wilayah Prioritas Infrastruktur (SDG 7)</h4>
                     <p class="text-sm text-gray-600 mt-2 mb-3">7 Kecamatan (misal: Karera, Kahaungu eti). Menjadi kantong kemiskinan energi (Non Listrik 9.5%), padahal potensi koperasi tinggi.</p>
@@ -146,7 +147,7 @@
                     </div>
                 </div>
 
-                <!-- KLASTER 3 (Biru) - Sesuai Makalah 4.3 dan 5.2 -->
+                <!-- KLASTER 3 (Biru) -->
                 <div class="bg-white p-5 rounded-lg shadow border-t-4 border-blue-500">
                     <h4 class="text-xl font-bold text-blue-800">Klaster 3: Wilayah Diversifikasi Ekonomi (SDG 8)</h4>
                     <p class="text-sm text-gray-600 mt-2 mb-3">7 Kecamatan (misal: Kota Waingapu, Kambera). Wilayah berkembang, petani terendah (47.0%), pusat pariwisata (Obwis 1.40).</p>
@@ -188,7 +189,7 @@
             { "Kecamatan": "Rindi", "Klaster_FPCM": 1, "Presentase_petani": 0.814, "Presentase_non_Listrik": 0.023, "obwis_100": 0.273, "Coop_1000": 0.000 }
         ];
 
-        // Definisi Klaster (Sesuai makalah Anda Bab 5.2)
+        // Definisi Klaster (Sesuai makalah Anda Bab 5.2, hlm. 21)
         const klasterInfo = {
             1: {
                 nama: "Klaster 1: Wilayah Agraris Mandiri Energi",
